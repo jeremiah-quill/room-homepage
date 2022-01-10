@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import data from "../data/data";
 
 function SliderElement(props) {
@@ -21,7 +21,7 @@ function SliderElement(props) {
 		setTimeout(() => {
 			setSlideStateCurrent("");
 			setSlideStatePrevious("");
-		}, 500);
+		}, 1000);
 	};
 
 	const goPrevSlide = () => {
@@ -38,45 +38,57 @@ function SliderElement(props) {
 		setTimeout(() => {
 			setSlideStateCurrent("");
 			setSlideStatePrevious("");
-		}, 500);
+		}, 1000);
 	};
 
 	return (
 		<div className="slider-element top-container">
 			<div className="hero-image fade">
 				<div style={{ position: "relative" }}>
+					<picture>
+						<source media="(min-width: 600px)" srcSet={currentSlide.bigImage} />
+						<img style={{ position: "absolute" }}
+						src={currentSlide.image}
+						className={slideStateCurrent} />
+					</picture>
+					<picture>
+						<source media="(min-width: 600px)" srcSet={previousSlide.bigImage} />
+						<img
+						src={previousSlide.image}
+						className={slideStatePrevious} />
+					</picture>
+{/* 
 					<img
 						style={{ position: "absolute" }}
 						src={currentSlide.image}
 						className={slideStateCurrent}
 					/>
-					<img src={previousSlide.image} className={slideStatePrevious} />
+					<img src={previousSlide.image} className={slideStatePrevious} /> */}
 				</div>
-
 			</div>
 			<section className="main-content-group content-group">
 				<div>
-				<h2 className="main-content">{currentSlide.title}</h2>
+					<h2 className="main-content">{currentSlide.title}</h2>
 
-				<p className="gray-text">{currentSlide.content}</p>
-				<div className="shop-now-button-group">
-					<button className="shop-now">shop now</button>
-					<img src="images/icon-arrow.svg" alt="arrow icon" />
-				</div>
-				<div className="slideshow-buttons">
-					<button onClick={goPrevSlide} className="slide-left">
-						<img
-							src="images/icon-angle-left.svg"
-							alt="navigate slideshow left"
-						/>
-					</button>
-					<button onClick={goNextSlide} className="slide-right">
-						<img
-							src="images/icon-angle-right.svg"
-							alt="navigate slideshow right"
-						/>
-					</button>
-				</div>
+					<p className="gray-text">{currentSlide.content}</p>
+					<div className="shop-now-button-group">
+						<button className="shop-now">shop now</button>
+						<img src="images/icon-arrow.svg" alt="arrow icon" />
+					</div>
+					<div className="slideshow-buttons">
+						<button onClick={goPrevSlide} className="slide-left">
+							<img
+								src="images/icon-angle-left.svg"
+								alt="navigate slideshow left"
+							/>
+						</button>
+						<button onClick={goNextSlide} className="slide-right">
+							<img
+								src="images/icon-angle-right.svg"
+								alt="navigate slideshow right"
+							/>
+						</button>
+					</div>
 				</div>
 			</section>
 		</div>
