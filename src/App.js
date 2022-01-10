@@ -17,7 +17,8 @@ function App() {
 					src="images/image-about-dark.jpg"
 					alt="furniture"
 				/>
-				<div className="about main-content-group">
+				<div className="about content-group">
+					<div>
 					<h3>about our furniture</h3>
 					<p className="gray-text">
 						Our multifunctional collection blends design and function to suit
@@ -27,12 +28,14 @@ function App() {
 						styles and anything in between. Product specialists are available to
 						help you create your dream space.
 					</p>
+					</div>
 				</div>
 				<img
 					className="about-light"
 					src="images/image-about-light.jpg"
 					alt="furniture"
 				/>
+				
 			</div>
 		</div>
 	);

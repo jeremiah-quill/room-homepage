@@ -52,6 +52,17 @@ function SliderElement(props) {
 					/>
 					<img src={previousSlide.image} className={slideStatePrevious} />
 				</div>
+
+			</div>
+			<section className="main-content-group content-group">
+				<div>
+				<h2 className="main-content">{currentSlide.title}</h2>
+
+				<p className="gray-text">{currentSlide.content}</p>
+				<div className="shop-now-button-group">
+					<button className="shop-now">shop now</button>
+					<img src="images/icon-arrow.svg" alt="arrow icon" />
+				</div>
 				<div className="slideshow-buttons">
 					<button onClick={goPrevSlide} className="slide-left">
 						<img
@@ -66,14 +77,6 @@ function SliderElement(props) {
 						/>
 					</button>
 				</div>
-			</div>
-			<section className="main-content-group">
-				<h2 className="main-content">{currentSlide.title}</h2>
-
-				<p className="gray-text">{currentSlide.content}</p>
-				<div className="shop-now-button-group">
-					<button className="shop-now">shop now</button>
-					<img src="images/icon-arrow.svg" alt="arrow icon" />
 				</div>
 			</section>
 		</div>
