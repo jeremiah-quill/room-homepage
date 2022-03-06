@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/room-homepage/static/js/main.3471794a.js",
+    "main.js": "/room-homepage/static/js/main.7f5261df.js",
     "index.html": "/room-homepage/index.html",
-    "main.3471794a.js.map": "/room-homepage/static/js/main.3471794a.js.map"
+    "main.7f5261df.js.map": "/room-homepage/static/js/main.7f5261df.js.map"
   },
   "entrypoints": [
-    "static/js/main.3471794a.js"
+    "static/js/main.7f5261df.js"
   ]
 }
