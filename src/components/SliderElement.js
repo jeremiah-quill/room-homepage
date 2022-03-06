@@ -57,13 +57,6 @@ function SliderElement(props) {
 						src={previousSlide.image}
 						className={slideStatePrevious} />
 					</picture>
-{/* 
-					<img
-						style={{ position: "absolute" }}
-						src={currentSlide.image}
-						className={slideStateCurrent}
-					/>
-					<img src={previousSlide.image} className={slideStatePrevious} /> */}
 				</div>
 			</div>
 			<section className="main-content-group content-group">
